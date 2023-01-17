@@ -15,5 +15,6 @@ public class RegistrationDbContext : DbContext
     {
         base.OnModelCreating(modelBuilder);
         modelBuilder.Entity<User>(entity => entity.HasIndex(u => u.NationalCode).IsUnique());
+        modelBuilder.Entity<User>(entity => entity.HasIndex(u => u.UserName).IsUnique());
     }
 }

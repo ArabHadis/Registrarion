@@ -23,5 +23,21 @@ namespace Registration.Controllers
 
            return Ok(result);
        }
+
+       [HttpGet]
+       public async Task<IActionResult> GetUsers()
+       {
+           var result = await _registrationService.GetUsers();
+
+           return Ok(result);
+       }
+
+       [HttpPost]
+       public async Task<IActionResult> SendEmail(string receiverEmail)
+        {
+           var result = await _registrationService.SendEmail(receiverEmail);
+
+           return Ok(result);
+       }
     }
 }
