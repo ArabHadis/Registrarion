@@ -3,3 +3,6 @@
 ################################################################################
 
 /.vs
+/Registration/Registration/obj
+/Registration/.vs/Registration
+/Registration/Registration/bin/Debug/net6.0
